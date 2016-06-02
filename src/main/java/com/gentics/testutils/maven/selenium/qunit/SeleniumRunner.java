@@ -81,7 +81,7 @@ public class SeleniumRunner {
 
 	public void runTest() throws QUnitException, UnknownHostException {
 		String basePath = settings.getProperty("basePath");
-		QUnitSeleniumRunner runner = new QUnitSeleniumRunner(driver, "http://" + InetAddress.getLocalHost().getHostName() + ":" + server.getPort()	+ basePath, module);
+		QUnitSeleniumRunner runner = new QUnitSeleniumRunner(driver, "http://" + InetAddress.getLocalHost().getHostAddress() + ":" + server.getPort()	+ basePath, module);
 		runner.executeTest();
 	}
 
